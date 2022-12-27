@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+<body>
+    <!-- /<script>
+        /**
+         * @param {number[]} nums
+         * @param {number} target
+         * @return {number[]}
+         */
+        // nums = [2,7,11,15];
+        // target = 9;
+        // var twoSum = function(nums, target) {
+        //     for(let i=0;i<nums.length;i++){
+        //         for(let j= i+1;j<nums.length;j++){
+        //             if((nums[i]+nums[j]) == target) {
+        //                 return [i, j]
+        //             }
+        //         }
+        //     }   
+        // }
+    </script>*/ -->
+    
+    <div ng-app="" ng-init="myCol='red'">
+
+        <input ng-model="myCol" value="{{myCol}}">
+        
+        <p style="color:{{myCol}}">Dòng chữ này sẽ thay đổi màu sắc dựa trên màu sắc được nhập vào ô bên trên</p>
+        </div>
+        
+</body>
+</html>
