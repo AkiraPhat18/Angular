@@ -1,3 +1,4 @@
+import { Product } from './common/product';
 import { Component } from '@angular/core';
 
 @Component({
@@ -6,5 +7,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.less']
 })
 export class AppComponent {
-  title = 'hello-angular';
+  product: Product =  {
+    name: 'S21',
+    quantity: 200,
+    price: 500
+  }
 }
