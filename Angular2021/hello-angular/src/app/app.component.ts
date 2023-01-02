@@ -1,5 +1,6 @@
+//import { Product_listComponent } from './components/product_list/product_list.component';
 import { Product } from './common/product';
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -7,9 +8,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.less']
 })
 export class AppComponent {
-  product: Product =  {
+  product :Product =  {
     name: 'S21',
     quantity: 200,
     price: 500
   }
 }
+
+
+
