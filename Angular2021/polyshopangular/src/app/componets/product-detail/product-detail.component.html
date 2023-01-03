@@ -1,0 +1,27 @@
+<div>
+  <form action="" (ngSubmit)="changeDetail(detailForm)" #detailForm = "ngForm">
+    <div class="form-group">
+      <label for="productCode">Product Code</label>
+      <input type="text" class="form-control" name="productCode" id="productCode"
+        value="{{ product.productCode }}"
+      aria-describedby="producthelpId" placeholder="Product Code">
+      <small id="helpId" class="form-text text-muted">Product Code is required</small>
+    </div>
+    <div class="form-group">
+      <label for="productName">Product Name</label>
+      <input type="text" class="form-control" name="productName" id="productName"
+      [(ngModel)] = product.productName
+      aria-describedby="productNamehelpId" placeholder="Product Name">
+      <!-- Khi người dùng thay đổi giá trị value thì product name cũng sẽ được cập nhật và ngược lại -->
+      <!-- dùng cú pháp [(ngModel)]="..." trong các thẻ <input> hoặc <select> để kết nối dữ liệu của thẻ đó với một biến thuộc tính nào đó,
+        ở đây chúng ta kết nối đến các thuộc tính code, name và job của đối tượng product. -->
+      <!-- Ng-model cho biết đối tượng nhận giá trị của input. {{productName}} sẽ in ra giá trị được nhập vào input. -->
+      <small id="productNamehelpId" class="form-text text-muted">Product Name is required</small>
+    </div>
+    <div class="form-group">
+      <button class="btn btn-primary">Update</button>
+    </div>
+  </form>
+  <hr>
+  <p>{{ product | json }}</p>
+</div>
