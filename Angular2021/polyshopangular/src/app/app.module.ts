@@ -1,3 +1,4 @@
+import { StarComponent } from './componets/star/star.component';
 import { ProductDetailComponent } from './componets/product-detail/product-detail.component';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -11,7 +12,8 @@ import { FormsModule } from '@angular/forms';
   declarations: [
     AppComponent,
     ProductListComponent,
-    ProductDetailComponent
+    ProductDetailComponent,
+    StarComponent
   ],
   imports: [
     BrowserModule,
