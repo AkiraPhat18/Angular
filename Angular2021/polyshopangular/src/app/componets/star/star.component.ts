@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnChanges, OnInit, Output, SimpleChanges } from '@angular/core';
 // import { EventEmitter } from '@angular/core';
 
 @Component({
@@ -6,7 +6,7 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
   templateUrl: './star.component.html',
   styleUrls: ['./star.component.css']
 })
-export class StarComponent implements OnInit {
+export class StarComponent implements OnInit, OnChanges {
   @Input()
   rating: number = 0;
 
@@ -15,7 +15,13 @@ export class StarComponent implements OnInit {
 
   constructor() { }
 
+  ngOnChanges(changes: SimpleChanges): void {
+      console.log('ngOnChanges');
+  }
+
   ngOnInit() {
+    console.log('ngOnInit');
+
     this.rating = 0;
   }
 
