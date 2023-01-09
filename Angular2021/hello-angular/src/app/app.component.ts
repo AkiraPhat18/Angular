@@ -1,4 +1,3 @@
-//import { Product_listComponent } from './components/product_list/product_list.component';
 import { Product } from './common/product';
 import { Component, OnInit } from '@angular/core';
 
@@ -97,5 +96,4 @@ public vietNamData =  [
     this.districts =
       this.vietNamData.find((data) => data.city === city)?.district || [];
   }
-
 }
