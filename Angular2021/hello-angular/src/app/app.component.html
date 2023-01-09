@@ -10,30 +10,30 @@
       <p>Quantity: {{product.quantity}}</p>
       <p>Price: {{product.price}}</p>
       <button class="btn btn-primary">Hello</button>
-    <br>
-    <hr>
-    <!--vd về *ngFor -->
-    <!-- <table class="table"> -->
-    <!-- <tr>
-        <th>STT</th>
-        <th>Tên</th>
-        <th>Chức vụ</th>
-        <th>Lương</th>
-      </tr>
-      <tr *ngFor="let person of  persons; let i = index">
-        <td>{{ i + 1 }}</td>
-        <td>{{ person.name_employee }}</td>
-        <td>{{ person.position }}</td>
-        <td>{{ person.salary | currency:'USD':'symbol':'1.2-2'}}</td>
-      </tr> -->
+      <br>
+      <hr>
+      <!--vd về *ngFor -->
+      <table class="table">
+        <tr>
+          <th>STT</th>
+          <th>Tên</th>
+          <th>Chức vụ</th>
+          <th>Lương</th>
+        </tr>
+        <tr *ngFor="let person of  persons; let i = index">
+          <td>{{ i + 1 }}</td>
+          <td>{{ person.name_employee }}</td>
+          <td>{{ person.position }}</td>
+          <td>{{ person.salary | currency:'USD':'symbol':'1.2-2'}}</td>
+        </tr>
 
-      <!--Sử dụng currency để quy đổi giá trị tiền tệ-->
-      <!-- UpperCasePipe: Chuyển đổi văn bản thành tất cả các chữ hoa.
+        <!--Sử dụng currency để quy đổi giá trị tiền tệ-->
+        <!-- UpperCasePipe: Chuyển đổi văn bản thành tất cả các chữ hoa.
       LowerCasePipe: Chuyển đổi văn bản thành tất cả các chữ thường. -->
-      <!-- </table> -->
+      </table>
       <br>
       Tỉnh / Thành Phố
-      <select id="cities" (change) ="changeCity($event)">
+      <select id="cities" (change)="changeCity($event)">
         <option *ngFor="let data of vietNamData" value=" {{data.city }}">
           {{ data.city}}
         </option>
