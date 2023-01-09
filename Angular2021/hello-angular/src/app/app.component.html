@@ -4,24 +4,17 @@
       <h1>Product Detail </h1>
     </div>
   </header>
-  <!-- <nav class="row"></nav> -->
   <section class="row">
     <div class="col">
       <p>Name: {{product.name}}</p>
       <p>Quantity: {{product.quantity}}</p>
       <p>Price: {{product.price}}</p>
-
-
       <button class="btn btn-primary">Hello</button>
-    </div>
     <br>
     <hr>
-    <div>
-
-    </div>
     <!--vd về *ngFor -->
-    <table class="table">
-      <tr>
+    <!-- <table class="table"> -->
+    <!-- <tr>
         <th>STT</th>
         <th>Tên</th>
         <th>Chức vụ</th>
@@ -31,10 +24,27 @@
         <td>{{ i + 1 }}</td>
         <td>{{ person.name_employee }}</td>
         <td>{{ person.position }}</td>
-        <td>{{ person.salary}}</td>
-      </tr>
+        <td>{{ person.salary | currency:'USD':'symbol':'1.2-2'}}</td>
+      </tr> -->
 
-    </table>
-
+      <!--Sử dụng currency để quy đổi giá trị tiền tệ-->
+      <!-- UpperCasePipe: Chuyển đổi văn bản thành tất cả các chữ hoa.
+      LowerCasePipe: Chuyển đổi văn bản thành tất cả các chữ thường. -->
+      <!-- </table> -->
+      <br>
+      Tỉnh / Thành Phố
+      <select id="cities" (change) ="changeCity($event)">
+        <option *ngFor="let data of vietNamData" value=" {{data.city }}">
+          {{ data.city}}
+        </option>
+      </select>
+      <br>
+      Quận / Huyện
+      <select name="" id="district" class="">
+        <option *ngFor="let district of districts" value=" {{ district }}">
+          {{ district }}
+        </option>
+      </select>
+    </div>
   </section>
 </div>
