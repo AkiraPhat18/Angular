@@ -1,19 +1,40 @@
-
 <div class="container">
-    <header class="row">
-      <div class="col">
-        <h1>Product Detail </h1>
-      </div>
-    </header>
-    <!-- <nav class="row"></nav> -->
-    <section class="row">
-      <div class="col">
-        <p>Name: {{product.name}}</p>
-        <p>Quantity: {{product.quantity}}</p>
-        <p>Price: {{product.price}}</p>
+  <header class="row">
+    <div class="col">
+      <h1>Product Detail </h1>
+    </div>
+  </header>
+  <!-- <nav class="row"></nav> -->
+  <section class="row">
+    <div class="col">
+      <p>Name: {{product.name}}</p>
+      <p>Quantity: {{product.quantity}}</p>
+      <p>Price: {{product.price}}</p>
 
 
-        <button class="btn btn-primary">Hello</button>
-      </div>
-    </section>
+      <button class="btn btn-primary">Hello</button>
+    </div>
+    <br>
+    <hr>
+    <div>
+
+    </div>
+    <!--vd về *ngFor -->
+    <table class="table">
+      <tr>
+        <th>STT</th>
+        <th>Tên</th>
+        <th>Chức vụ</th>
+        <th>Lương</th>
+      </tr>
+      <tr *ngFor="let person of  persons; let i = index">
+        <td>{{ i + 1 }}</td>
+        <td>{{ person.name_employee }}</td>
+        <td>{{ person.position }}</td>
+        <td>{{ person.salary}}</td>
+      </tr>
+
+    </table>
+
+  </section>
 </div>
