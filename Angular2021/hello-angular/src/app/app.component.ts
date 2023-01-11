@@ -96,4 +96,5 @@ public vietNamData =  [
     this.districts =
       this.vietNamData.find((data) => data.city === city)?.district || [];
   }
+  condition = false;
 }

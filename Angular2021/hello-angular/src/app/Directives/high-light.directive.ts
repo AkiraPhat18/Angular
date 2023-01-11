@@ -12,7 +12,7 @@ export class HighLightDirective {
     console.log('HighLightDirective');
   }
    @HostListener('mouseenter') onMouseEnter() {
-    this.highlight('pink');
+    this.highlight('cyan');
   }
 
   @HostListener('mouseleave') onMouseLeave() {

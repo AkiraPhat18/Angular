@@ -53,5 +53,32 @@
 
       <span appHighLight="'blue'">https://www.youtube.com</span>
     </div>
+    <div class="container">
+      <div class="card">
+        <div class="card-header">
+          Item capitalize
+        </div>
+        <div class="card-body">
+          <p></p>
+          <div class="form-group">
+            <input type="text" class="form-control" appCapitalize>
+          </div>
+
+          <p></p>
+          <div class="form-group">
+            <textarea name="" id="" cols="30" rows="10" appCapitalize></textarea>
+          </div>
+        </div>
+      </div>
+    </div>
+    <p *appUnless="condition" class="unless a">
+      (A) This paragraph is displayed because the condition is false.
+    </p>
+
+    <p *appUnless="!condition" class="unless b">
+      (B) Although the condition is true,
+      this paragraph is displayed because appUnless is set to false.
+    </p>
+
   </section>
 </div>
